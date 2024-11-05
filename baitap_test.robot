@@ -13,20 +13,14 @@ ${QUANTITY}            2                            # Số lượng sản phẩm
 ${LOGIN_BUTTON}        xpath=//button[contains(text(),'Đăng nhập')]
 ${USERNAME_FIELD}      xpath=//input[@type='email']
 ${PASSWORD_FIELD}      xpath=//input[@type='password']
-${SEARCH_INPUT}        xpath=//html/body/section[1]/div[2]/div/div/div[2]/div/div/div[2]/input
+${SEARCH_INPUT}        xpath=//div[@class='mz-header-vsearch__input-group']//input[@class='mz-header-vsearch__keyword-input']
 ${FIRST_PRODUCT}       xpath=(//div[contains(@class, 'product-card-col')])[1]
-#${QUANTITY_INPUT_CHECK}      xpath=//div[@class='quantity-control-group']
 ${QUANTITY_INPUT}      xpath=//div[@class='f23-product-detail-info-row cart-segment ']//input[@class='quantity-input']
 ${ADD_TO_CART_BTN}     xpath=//button[contains(@class, 'add-cart-btn') and .//span[contains(text(), 'Thêm vào giỏ hàng')]]
-#${CART_ICON}           xpath=//a[contains(@class, 'cart-icon')]
-#${CART_QUANTITY}       xpath=//input[contains(@class, 'cart-quantity')]
-#${CART_TOTAL_PRICE}    xpath=//span[contains(@class, 'cart-total-price')]
-#${QUANTITY_INPUT}      xpath=//html/body/div[1]/div/div/div[1]/section[1]/div[1]/div[2]/div[12]/div/input
-#${ADD_TO_CART_BTN}     xpath=//html/body/div[1]/div/div/div[1]/section[1]/div[1]/div[2]/div[12]/button
-${CART_ICON}           xpath=//html/body/section[1]/div[2]/div/div/div[3]/div/a/div[1]
+${CART_ICON}           xpath=//div[@class='cart-dropdown mz-dropdown']//a[@class='section-body__item']
 ${CART_QUANTITY}       xpath=//input[contains(@class, 'mz-number-control__input')]
-${CART_TOTAL_PRICE}    xpath=//html/body/div[1]/div/div/section/div/div/div[2]/div/div/div[2]/div/div[3]/div/span
-${SEARCH_BUTTON}       xpath=//html/body/section[1]/div[2]/div/div/div[2]/div/button
+${CART_TOTAL_PRICE}    xpath=//div[contains(@class, 'total-current-price-field')]
+
 
 *** Test Cases ***
 Login and Add Product to Cart
